@@ -2,7 +2,9 @@ package com.sparta.memo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+@EnableJpaAuditing // Timestamped 수정시 자동 반영
 @SpringBootApplication
 public class MemoApplication {
 
