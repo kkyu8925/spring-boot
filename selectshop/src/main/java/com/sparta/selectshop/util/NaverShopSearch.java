@@ -1,6 +1,6 @@
-package com.sparta.selectshop.utils;
+package com.sparta.selectshop.util;
 
-import com.sparta.selectshop.models.ItemDto;
+import com.sparta.selectshop.dto.ItemDto;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.http.*;

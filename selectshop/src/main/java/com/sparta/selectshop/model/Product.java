@@ -1,5 +1,8 @@
-package com.sparta.selectshop.models;
+package com.sparta.selectshop.model;
 
+import com.sparta.selectshop.dto.ItemDto;
+import com.sparta.selectshop.dto.ProductMypriceRequestDto;
+import com.sparta.selectshop.dto.ProductRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -31,8 +34,13 @@ public class Product extends Timestamped {
     @Column(nullable = false)
     private int myprice;
 
+    @Column(nullable = false)
+    private Long userId;
+
     // 관심 상품 생성 시 이용합니다.
-    public Product(ProductRequestDto requestDto) {
+    public Product(ProductRequestDto requestDto, Long userId) {
+        // 관심상품을 등록한 회원 Id 저장
+        this.userId = userId;
         this.title = requestDto.getTitle();
         this.image = requestDto.getImage();
         this.link = requestDto.getLink();
@@ -41,13 +49,11 @@ public class Product extends Timestamped {
     }
 
     // 관심 가격 변경 시 이용합니다.
-    public void update(ProductMypriceRequestDto requestDto) {
+    public void updateMyPrice(ProductMypriceRequestDto requestDto) {
         this.myprice = requestDto.getMyprice();
     }
 
     public void updateByItemDto(ItemDto itemDto) {
         this.lprice = itemDto.getLprice();
     }
-
-    ;
 }

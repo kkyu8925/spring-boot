@@ -1,4 +1,4 @@
-package com.sparta.selectshop.models;
+package com.sparta.selectshop.model;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

@@ -1,4 +1,4 @@
-package com.sparta.selectshop.models;
+package com.sparta.selectshop.dto;
 
 import lombok.Getter;
 import org.json.JSONObject;

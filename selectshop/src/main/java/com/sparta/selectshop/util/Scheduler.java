@@ -1,8 +1,8 @@
-package com.sparta.selectshop.utils;
+package com.sparta.selectshop.util;
 
-import com.sparta.selectshop.models.ItemDto;
-import com.sparta.selectshop.models.Product;
-import com.sparta.selectshop.models.ProductRepository;
+import com.sparta.selectshop.dto.ItemDto;
+import com.sparta.selectshop.model.Product;
+import com.sparta.selectshop.repository.ProductRepository;
 import com.sparta.selectshop.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;

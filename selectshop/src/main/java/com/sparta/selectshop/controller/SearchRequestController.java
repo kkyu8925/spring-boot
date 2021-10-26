@@ -1,7 +1,7 @@
 package com.sparta.selectshop.controller;
 
-import com.sparta.selectshop.models.ItemDto;
-import com.sparta.selectshop.utils.NaverShopSearch;
+import com.sparta.selectshop.dto.ItemDto;
+import com.sparta.selectshop.util.NaverShopSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
