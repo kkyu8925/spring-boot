@@ -39,7 +39,8 @@ public class ProductRestController {
     // 설정 가격 변경
     @PutMapping("/api/products/{id}")
     public Long updateProduct(@PathVariable Long id, @RequestBody ProductMypriceRequestDto requestDto) {
-        return productService.updateProduct(id, requestDto);
+        Product product = productService.updateProduct(id, requestDto);
+        return product.getId();
     }
 
     // (관리자용) 등록된 모든 상품 목록 조회
