@@ -84,6 +84,6 @@ class ProductServiceTest {
                 () -> productService.updateProduct(productId, requestMyPriceDto));
 
         // then
-        assertEquals("희망 최저가는 100이하가 될 수 없습니다.", exception.getMessage());
+        assertEquals("유효하지 않은 관심 가격입니다. 최소 100 원 이상으로 설정해 주세요.", exception.getMessage());
     }
 }
