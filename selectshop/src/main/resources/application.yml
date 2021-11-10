@@ -31,5 +31,5 @@ logging:
           descriptor:
             sql: trace
 
-#jwt:
-#  secret: javainuse
+jwt:
+  secret: javainuse
