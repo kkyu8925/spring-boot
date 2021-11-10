@@ -24,6 +24,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final KakaoOAuth2 kakaoOAuth2;
     private final AuthenticationManager authenticationManager;
+
     private static final String ADMIN_TOKEN = "AAABnv/xRVklrnYxKZ0aHgTBcXukeZygoC";
 
     public User registerUser(SignupRequestDto requestDto) {

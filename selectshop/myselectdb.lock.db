@@ -1,6 +1,6 @@
 #FileLock
-#Wed Nov 10 13:55:03 KST 2021
+#Wed Nov 10 16:40:06 KST 2021
 hostName=DESKTOP-NQ27C3G.mshome.net
-id=17d083304cd8cc76458ddb4064a53f9a6e2d373b9e4
+id=17d08ca20f6efb1e584276effcfab3788e1e0713282
 method=file
-server=172.23.80.1\:50285
+server=172.23.80.1\:54883

@@ -8,6 +8,7 @@ import com.sparta.selectshop.dto.ProductMypriceRequestDto;
 import com.sparta.selectshop.model.User;
 import com.sparta.selectshop.repository.FolderRepository;
 import com.sparta.selectshop.repository.ProductRepository;
+import com.sparta.selectshop.util.ProductValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -23,7 +24,6 @@ public class ProductService {
     // 멤버 변수 선언
     private final ProductRepository productRepository;
     private final FolderRepository folderRepository;
-    private static final int MIN_PRICE = 100;
 
     public Page<Product> getProducts(Long userId, int page, int size, String sortBy, boolean isAsc) {
         Sort.Direction direction = isAsc ? Sort.Direction.ASC : Sort.Direction.DESC;
@@ -48,10 +48,11 @@ public class ProductService {
         );
 
         // 변경될 관심 가격이 유효한지 확인합니다.
-        int myPrice = requestDto.getMyprice();
-        if (myPrice < MIN_PRICE) {
-            throw new IllegalArgumentException("유효하지 않은 관심 가격입니다. 최소 " + MIN_PRICE + " 원 이상으로 설정해 주세요.");
-        }
+//        int myPrice = requestDto.getMyprice();
+//        if (myPrice < MIN_PRICE) {
+//            throw new IllegalArgumentException("유효하지 않은 관심 가격입니다. 최소 " + MIN_PRICE + " 원 이상으로 설정해 주세요.");
+//        }
+        ProductValidator.validateUpdate(requestDto);
 
         product.updateMyPrice(requestDto);
         return product;

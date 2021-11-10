@@ -4,7 +4,6 @@ import com.sparta.selectshop.model.Folder;
 import com.sparta.selectshop.security.UserDetailsImpl;
 import com.sparta.selectshop.service.FolderService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;

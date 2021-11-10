@@ -35,14 +35,14 @@ $(document).ready(function () {
 })
 
 function showProduct(folderId = null) {
-    var dataSource = null;
-    var isAdmin = false;
+    let dataSource;
+    let isAdmin = false;
     if ($('#admin').length === 1) {
         isAdmin = true
     }
 
-    var sorting = $("#sorting option:selected").val();
-    var isAsc = $(':radio[name="isAsc"]:checked').val();
+    let sorting = $("#sorting option:selected").val();
+    let isAsc = $(':radio[name="isAsc"]:checked').val();
     console.log(sorting, isAsc);
 
     if (folderId) {
@@ -143,6 +143,14 @@ function addFolder() {
             $('#container2').removeClass('active');
             alert('성공적으로 등록되었습니다.');
             window.location.reload();
+        },
+        error: function (response) {
+            // 서버에서 받은 에러 메시지를 노출
+            if (response.responseJSON && response.responseJSON.message) {
+                alert(response.responseJSON.message);
+            } else {
+                alert("알 수 없는 에러가 발생했습니다.");
+            }
         }
     })
 }
@@ -289,6 +297,14 @@ function setMyprice() {
             $('#container').removeClass('active');
             alert('성공적으로 등록되었습니다.');
             window.location.reload();
+        },
+        error: function (response) {
+            // 서버에서 받은 에러 메시지를 노출
+            if (response.responseJSON && response.responseJSON.message) {
+                alert(response.responseJSON.message);
+            } else {
+                alert("알 수 없는 에러가 발생했습니다.");
+            }
         }
     })
 }
