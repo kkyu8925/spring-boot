@@ -1,9 +1,9 @@
 package com.sparta.selectshop.controller;
 
-import com.sparta.selectshop.model.Product;
 import com.sparta.selectshop.dto.ProductMypriceRequestDto;
-import com.sparta.selectshop.repository.ProductRepository;
 import com.sparta.selectshop.dto.ProductRequestDto;
+import com.sparta.selectshop.model.Product;
+import com.sparta.selectshop.model.User;
 import com.sparta.selectshop.security.UserDetailsImpl;
 import com.sparta.selectshop.service.ProductService;
 import lombok.RequiredArgsConstructor;
@@ -12,12 +12,11 @@ import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
-@RequiredArgsConstructor // final로 선언된 멤버 변수를 자동으로 생성합니다.
 @RestController // JSON으로 데이터를 주고받음을 선언합니다.
-public class ProductRestController {
-
+@RequiredArgsConstructor
+public class ProductController {
+    // 멤버 변수 선언
     private final ProductService productService;
-    private final ProductRepository productRepository;
 
     // 로그인한 회원이 등록한 상품들 조회
     @GetMapping("/api/products")
@@ -62,5 +61,16 @@ public class ProductRestController {
             @RequestParam("isAsc") boolean isAsc
     ) {
         return productService.getAllProducts(page, size, sortBy, isAsc);
+    }
+
+    // 상품에 폴더 추가
+    @PostMapping("/api/products/{id}/folder")
+    public Long addFolder(@PathVariable Long id,
+                          @RequestParam("folderId") Long folderId,
+                          @AuthenticationPrincipal UserDetailsImpl userDetails) {
+        User user = userDetails.getUser();
+        Product product = productService.addFolder(id, folderId, user);
+        // 응답 보내기
+        return product.getId();
     }
 }

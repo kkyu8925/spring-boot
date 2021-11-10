@@ -9,9 +9,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
-@Getter // get 함수를 일괄적으로 만들어줍니다.
 @Setter
+@Getter // get 함수를 일괄적으로 만들어줍니다.
 @NoArgsConstructor // 기본 생성자를 만들어줍니다.
 @Entity // DB 테이블 역할을 합니다.
 public class Product extends Timestamped {
@@ -39,6 +40,9 @@ public class Product extends Timestamped {
 
     @Column(nullable = false)
     private Long userId;
+
+    @ManyToMany
+    private List<Folder> folderList;
 
     // 관심 상품 생성 시 이용합니다.
 //    public Product(ProductRequestDto requestDto, Long userId) {
@@ -90,5 +94,9 @@ public class Product extends Timestamped {
 
     public void updateByItemDto(ItemDto itemDto) {
         this.lprice = itemDto.getLprice();
+    }
+
+    public void addFolder(Folder folder) {
+        this.folderList.add(folder);
     }
 }

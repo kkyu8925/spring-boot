@@ -1,6 +1,6 @@
 #FileLock
-#Tue Nov 09 19:23:27 KST 2021
-server=192.168.219.183\:61175
-hostName=KkyuGram
+#Wed Nov 10 13:55:03 KST 2021
+hostName=DESKTOP-NQ27C3G.mshome.net
+id=17d083304cd8cc76458ddb4064a53f9a6e2d373b9e4
 method=file
-id=17d04395bf0c62fdb6b9c5db404e3a4699262878046
+server=172.23.80.1\:50285

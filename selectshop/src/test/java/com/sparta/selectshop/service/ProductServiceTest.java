@@ -3,6 +3,7 @@ package com.sparta.selectshop.service;
 import com.sparta.selectshop.dto.ProductMypriceRequestDto;
 import com.sparta.selectshop.dto.ProductRequestDto;
 import com.sparta.selectshop.model.Product;
+import com.sparta.selectshop.repository.FolderRepository;
 import com.sparta.selectshop.repository.ProductRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,9 +19,11 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class ProductServiceTest {
-
     @Mock
     ProductRepository productRepository;
+
+    @Mock
+    FolderRepository folderRepository;
 
     @Test
     @DisplayName("updateProduct() 에 의해 관심 가격이 3만원으로 변경되는지 확인")
@@ -43,7 +46,7 @@ class ProductServiceTest {
 
         Product product = new Product(requestProductDto, userId);
 
-        ProductService productService = new ProductService(productRepository);
+        ProductService productService = new ProductService(productRepository, folderRepository);
         when(productRepository.findById(productId))
                 .thenReturn(Optional.of(product));
 
@@ -75,15 +78,13 @@ class ProductServiceTest {
 
         Product product = new Product(requestProductDto, userId);
 
-        ProductService productService = new ProductService(productRepository);
+        ProductService productService = new ProductService(productRepository, folderRepository);
         when(productRepository.findById(productId))
                 .thenReturn(Optional.of(product));
 
         // when
+        // then
         Exception exception = assertThrows(IllegalArgumentException.class,
                 () -> productService.updateProduct(productId, requestMyPriceDto));
-
-        // then
-        assertEquals("유효하지 않은 관심 가격입니다. 최소 100 원 이상으로 설정해 주세요.", exception.getMessage());
     }
 }
