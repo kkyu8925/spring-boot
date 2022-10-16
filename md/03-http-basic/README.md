@@ -6,7 +6,7 @@
 
 ### <a href="섹션 3. HTTP 기본.md">섹션 3. HTTP 기본</a>
 
-### 섹션 4. HTTP 메서드
+### <a href="섹션 4. HTTP 메서드.md">섹션 4. HTTP 메서드</a>
 
 ### 섹션 5. HTTP 메서드 활용
 
