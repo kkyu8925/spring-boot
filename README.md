@@ -6,7 +6,7 @@
 
 ### <a href="md/03-http-basic/README.md">3. 모든 개발자를 위한 HTTP 웹 기본 지식</a>
 
-### 4. 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술
+### <a href="md/04-mvc1/README.md">4. 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술</a>
 
 ### 5. 스프링 MVC 2편 - 백엔드 웹 개발 활용 기술
 
