@@ -10,6 +10,8 @@
 
 ### 섹션 4. 검증1 - Validation
 
+- [spring-roadmap/spring-mvc2-validation](https://github.com/spring-roadmap/spring-mvc2-validation)
+
 ### 섹션 5. 검증2 - Bean Validation
 
 ### 섹션 6. 로그인 처리1 - 쿠키, 세션
