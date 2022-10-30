@@ -18,6 +18,8 @@
 
 ### 섹션 6. 로그인 처리1 - 쿠키, 세션
 
+- [spring-roadmap/spring-mvc2-login](https://github.com/spring-roadmap/spring-mvc2-login)
+
 ### 섹션 7. 로그인 처리2 - 필터, 인터셉터
 
 ### 섹션 8. 예외 처리와 오류 페이지
