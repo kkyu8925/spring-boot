@@ -48,7 +48,11 @@
 
 ### 섹션 8. 예외 처리와 오류 페이지
 
+- [spring-roadmap/spring-mvc2-exception](https://github.com/spring-roadmap/spring-mvc2-exception)
+
 ### 섹션 9. API 예외 처리
+
+- [spring-roadmap/spring-mvc2-exception](https://github.com/spring-roadmap/spring-mvc2-exception)
 
 ### 섹션 10. 스프링 타입 컨버터
 
