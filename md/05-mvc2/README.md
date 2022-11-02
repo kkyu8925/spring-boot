@@ -56,6 +56,8 @@
 
 ### 섹션 10. 스프링 타입 컨버터
 
+- [spring-roadmap/spring-mvc2-converter](https://github.com/spring-roadmap/spring-mvc2-converter)
+
 ### 섹션 11. 파일 업로드
 
 ### 섹션 12. 다음으로
