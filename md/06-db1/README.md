@@ -29,6 +29,13 @@
 
 ### 섹션 4. 스프링과 문제 해결 - 트랜잭션
 
+#### 트랜잭션 추상화
+
+- interface PlatformTransactionManger, 스프링 트랜잭션 추상화 인터페이스
+- DataSourceTransactionManger, JDBC 트랜잭션 구현체
+- JpaTransactionManger, JPA 트랜잭션 구현체
+- HibernateTransactionManger, 하이버네이트 트랜잭션 구현체
+
 ### 섹션 5. 자바 예외 이해
 
 ### 섹션 6. 스프링과 문제 해결 - 예외 처리, 반복
