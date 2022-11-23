@@ -14,4 +14,4 @@
 
 ### <a href="md/07-db2/README.md">7. 스프링 DB 2편 - 데이터 접근 활용 기술</a>
 
-### 8. 스프링 핵심 원리 - 고급
+### <a herf="md/08-core-advanced/README.md">8. 스프링 핵심 원리 - 고급</a>
