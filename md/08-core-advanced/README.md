@@ -4,7 +4,7 @@
 
 ### 섹션 1. 예제 만들기
 
-### 섹션 2. 쓰레드 로컬 - ThreadLocal
+### <a href="섹션 2. 쓰레드 로컬 - ThreadLocal.md">섹션 2. 쓰레드 로컬 - ThreadLocal</a>
 
 ### 섹션 3. 템플릿 메서드 패턴과 콜백 패턴
 
