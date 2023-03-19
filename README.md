@@ -16,4 +16,4 @@
 
 ### <a href="md/08-core-advanced/README.md">8. 스프링 핵심 원리 - 고급</a>
 
-### <a href="md/09-boot/README.md">9. 실전! 스프링 부트</a>
+### <a href="md/09-boot/README.md">9. 스프링 부트 - 핵심 원리와 활용</a>
